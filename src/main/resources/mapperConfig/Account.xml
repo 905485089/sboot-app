@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.uek.boot.mapper.AccountMapper">
+
+    <!-- 以下方法将作为学习使用的通用的实现方法 -->
+    <!-- 新增一条记录 -->
+    <insert id="save" parameterType="account">
+
+        insert into
+        account(name,balance)
+        values(#{name},#{balance})
+
+    </insert>
+
+    <select id="find" resultType="account">
+        select * from account
+    </select>
+</mapper>

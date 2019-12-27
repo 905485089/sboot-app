@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<!--<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">-->
+<head>
+    <meta charset="UTF-8">
+    <title>Spring's First Page</title>
+
+</head>
+<body>
+Welcome to SD1907.
+<h3 align="center">账户列表</h3>
+<hr color="red">
+<center>
+    <table border="1px">
+        <tr>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>余额</th>
+        </tr>
+        <tr th:each="account:${page.result}">
+            <td th:text="${account.id}">001</td>
+            <td th:text="${account.name}">郭纯</td>
+            <td th:text="${account.balance}">-380</td>
+        </tr>
+    </table>
+</center>
+<script src="assets/js/test.js" th:src="@{assets/js/test.js}"></script>
+<script>
+    test();
+</script>
+</body>
+</html>
